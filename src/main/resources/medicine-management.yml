@@ -47,10 +47,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Pet'
+              $ref: '#/components/schemas/PetResource'
           application/xml:
             schema:
-              $ref: '#/components/schemas/Pet'
+              $ref: '#/components/schemas/PetResource'
           application/x-www-form-urlencoded:
             schema:
               $ref: '#/components/schemas/PetForm'
@@ -87,7 +87,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Pet"
+                $ref: "#/components/schemas/PetResource"
         default:
           description: unexpected error
           content:
@@ -96,10 +96,9 @@ paths:
                 $ref: "#/components/schemas/Error"
 components:
   schemas:
-    Pet:
+    PetResource:
       type: object
       required:
-        - id
         - name
       properties:
         id:
@@ -112,7 +111,7 @@ components:
     Pets:
       type: array
       items:
-        $ref: "#/components/schemas/Pet"
+        $ref: "#/components/schemas/PetResource"
     Error:
       type: object
       required:

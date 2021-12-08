@@ -129,16 +129,13 @@
                             <inputSpec>
                                 ${project.basedir}/src/main/resources/medicine-management.yml
                             </inputSpec>
-                            <generatorName>spring</generatorName>
+                            <generatorName>kotlin-spring</generatorName>
                             <library>spring-boot</library>
-                            <supportingFilesToGenerate>
-                                ApiUtil.java
-                            </supportingFilesToGenerate>
+                            <apiPackage>com.rayquaza.openapi</apiPackage>
+                            <modelPackage>com.rayquaza.openapi.resource</modelPackage>
                             <configOptions>
-                                <basePackage>com.rayquaza.openapi</basePackage>
-                                <apiPackage>com.rayquaza.openapi.api</apiPackage>
-                                <modelPackage>com.rayquaza.openapi.model</modelPackage>
-                                <delegatePattern>true</delegatePattern>
+                                <sourceFolder>target</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
                             </configOptions>
                         </configuration>
                     </execution>
